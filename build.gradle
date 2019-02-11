@@ -1,0 +1,34 @@
+buildscript {
+	ext {
+		springBootVersion = '2.1.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group = 'com.cucumber'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compile 'org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M3'
+
+	compile group: 'io.rest-assured', name: 'json-schema-validator', version: '3.0.3'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compile group: 'info.cukes', name: 'cucumber-spring', version: '1.2.5'
+	compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
+}
