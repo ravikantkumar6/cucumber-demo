@@ -1,4 +1,5 @@
 #Cucumber 
+
 ###Setup
 
 - Add gradle dependency in the gradle file.
@@ -27,3 +28,5 @@ Feature: Proof of concept to make cucmber framework integration
     When second step to create runner class
     Then create feature file
 ```
+
+```Note :- check whether``` **```substeps intellij plug```** ```is installed or not if installed then remove it.```
