@@ -24,10 +24,6 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compile 'org.apache.maven.plugins:maven-surefire-plugin:3.0.0-M3'
-
-	compile group: 'io.rest-assured', name: 'json-schema-validator', version: '3.0.3'
-
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	compile group: 'info.cukes', name: 'cucumber-spring', version: '1.2.5'
 	compile group: 'info.cukes', name: 'cucumber-junit', version: '1.2.5'
